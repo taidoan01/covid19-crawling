@@ -23,5 +23,5 @@ browser.close()
  
 df = pd.DataFrame(list(zip(list_cities,list_totals,list_dies)))
 df_new = pd.DataFrame(df.values[1:],columns = df.iloc[0])
-df_new.to_csv("Covid-19_VN_Dataset.csv")
+df_new.to_csv("Covid-19_VN_Dataset.csv", index = False)
     
