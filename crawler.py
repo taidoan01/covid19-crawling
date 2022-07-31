@@ -4,11 +4,11 @@ import pandas as pd
 
 browser = webdriver.Chrome(executable_path=r".\chromedriver.exe")
 browser.get("https://covid19.gov.vn/")
-# chuyen toi frame can lay data
+
 browser.switch_to.frame(1)
 
 target = browser.find_elements_by_xpath("/html/body/div[2]/div[1]/div")
-# lay tung co trong target
+
 for t in target:
     cities = t.find_elements_by_class_name("city")
     totals = t.find_elements_by_class_name("total")
